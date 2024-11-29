@@ -36,3 +36,5 @@ for (let i = 0; i < n.length; i++) {
 
 print(numeroPar)
 print(numeroImpar) */
+
+const {gets, print} = require('./funcoes-auxiliares-ex2')
