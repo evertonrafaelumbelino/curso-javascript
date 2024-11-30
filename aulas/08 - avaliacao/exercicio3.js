@@ -20,4 +20,26 @@
         2050.00
 */
 
+/* Minha tentativa:
+
 const {gets, print} = require('./funcoes-auxiliares-ex3')
+
+const valorBruto = gets()
+const beneficioAdicional = gets()
+
+let percentualImposto = valorBruto
+
+if (percentualImposto > 0 && percentualImposto <= 1100.00) {
+    percentualImposto = percentualImposto * 0.05
+} else if (percentualImposto > 1100.00 && percentualImposto <= 2500.00 ) {
+    percentualImposto = percentualImposto * 0.10
+} else {
+    percentualImposto = percentualImposto * 0.15
+}
+
+const calculoSalario = (valorBruto - percentualImposto + beneficioAdicional)
+
+print(valorBruto)
+print(beneficioAdicional)
+print(percentualImposto)
+print(calculoSalario) */
