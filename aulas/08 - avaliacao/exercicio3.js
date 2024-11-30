@@ -43,3 +43,14 @@ print(valorBruto)
 print(beneficioAdicional)
 print(percentualImposto)
 print(calculoSalario) */
+
+const {gets, print} = require('./funcoes-auxiliares-ex3')
+
+const valorSalarioBruto = gets()
+const valorAdicionalDosBeneficios = gets()
+
+function calcularPorcentagem(salario, percentual) {
+    return salario * (percentual / 100)
+}
+
+print(calcularPorcentagem(valorSalarioBruto, 10))
