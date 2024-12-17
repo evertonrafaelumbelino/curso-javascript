@@ -1,12 +1,4 @@
-var teste1;
+const x = 10
+x = 11
 
-function teste2() {
-    console.log(teste2)
-}
-
-teste1()
-teste2()
-
-teste1 = function() {
-    console.log(teste1)
-}
+console.log(x)
