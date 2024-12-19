@@ -4,11 +4,12 @@
     undefined
     number
     string
-    synbol
+    Symbol
 */
 
 //object
 
-const x = { nome: null}
+const x = Symbol('10')
+const y = x
 
-console.log(JSON.stringify(x))
+console.log(x === y)
