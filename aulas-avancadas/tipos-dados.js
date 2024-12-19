@@ -9,7 +9,15 @@
 
 //object
 
-const x = Symbol('10')
-const y = x
+const pessoa = {
+    nome: 'Renan',
+    idade: 30,
+    falar: function () {
+        console.log(`Meu nome é ${this.nome}`)
+    }
+}
 
-console.log(x === y)
+const y = pessoa.falar
+
+pessoa.falar()
+y()
