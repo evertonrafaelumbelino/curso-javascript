@@ -1,9 +1,5 @@
-const pessoa = {
-    genero: 'masculino'
+String.prototype.toPLang = function () {
+    return `P ${this}`
 }
 
-const renan = Object.create(pessoa)
-
-renan.nome = 'Renan'
-
-console.log(renan.genero)
+console.log('teste'.toPLang())
