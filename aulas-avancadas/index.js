@@ -1,11 +1,9 @@
 const pessoa = {
-    idade: 18
+    genero: 'masculino'
 }
 
-const renan = {
-    nome: 'renan',
-    idade: 30,
-    __proto__: pessoa
-}
+const renan = Object.create(pessoa)
 
-console.log(renan.idade)
+renan.nome = 'Renan'
+
+console.log(renan.genero)
