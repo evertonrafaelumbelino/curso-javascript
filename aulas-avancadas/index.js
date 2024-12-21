@@ -1,13 +1,19 @@
 // First Class Functions
 // Higher Order Functions
 
-function falarMeuNome() {
-    console.log('Meu nome é Renan')
+function funcao1() {
+    console.log(this)
 }
 
-function falarMeuNomeCompleto(falarMeuNome) {
-    falarMeuNome()
-    console.log('Johannsen de Paula')
+const funcao2 = () => {
+    console.log(this)
 }
 
-falarMeuNomeCompleto(falarMeuNome)
+const renan = {
+    nome:'Renan',
+    funcao1,
+    funcao2
+}
+
+renan.funcao1()
+renan.funcao2()
