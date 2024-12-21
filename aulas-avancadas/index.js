@@ -1,5 +1,13 @@
-String.prototype.toPLang = function () {
-    return `P ${this}`
+// First Class Functions
+// Higher Order Functions
+
+function falarMeuNome() {
+    console.log('Meu nome é Renan')
 }
 
-console.log('teste'.toPLang())
+function falarMeuNomeCompleto(falarMeuNome) {
+    falarMeuNome()
+    console.log('Johannsen de Paula')
+}
+
+falarMeuNomeCompleto(falarMeuNome)
