@@ -1,11 +1,11 @@
-function soma(x) {
-    return (y) => {
-        return x + y
-    }
+const pessoa = {
+    nome: 'Renan',
+    idade: 30
 }
 
-const somaParcial = soma(10)
+function gritar(prefixo) {
+    console.log(prefixo, this.nome)
+}
 
-console.log(somaParcial(20))
-console.log(somaParcial(30))
-console.log(somaParcial(40))
+gritar.apply(pessoa, ['Olaaaaa'])
+gritar.call(pessoa, 'Olaaaaa')
