@@ -1,19 +1,11 @@
-// First Class Functions
-// Higher Order Functions
-
-function funcao1() {
-    console.log(this)
+function soma(x) {
+    return (y) => {
+        return x + y
+    }
 }
 
-const funcao2 = () => {
-    console.log(this)
-}
+const somaParcial = soma(10)
 
-const renan = {
-    nome:'Renan',
-    funcao1,
-    funcao2
-}
-
-renan.funcao1()
-renan.funcao2()
+console.log(somaParcial(20))
+console.log(somaParcial(30))
+console.log(somaParcial(40))
