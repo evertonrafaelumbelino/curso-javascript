@@ -1,11 +1,18 @@
-const pessoa = {
-    nome: 'Renan',
-    idade: 30
+function adicao(x, y) {
+    return x + y
 }
 
-function gritar(prefixo) {
-    console.log(prefixo, this.nome)
+function multiplicacao(x, y) {
+    return x * y
 }
 
-gritar.apply(pessoa, ['Olaaaaa'])
-gritar.call(pessoa, 'Olaaaaa')
+function calcular(x, operacao, y) {
+    console.log(operacao(x, y))
+}
+
+calcular(10, adicao, 20)
+calcular(10, multiplicacao, 20)
+
+document.getElementById('btn1').addEventListener('click', () => {
+    console.log('Clicou!')
+})
