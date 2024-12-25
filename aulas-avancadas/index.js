@@ -1,18 +1,5 @@
-function adicao(x, y) {
-    return x + y
-}
+const lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-function multiplicacao(x, y) {
-    return x * y
-}
-
-function calcular(x, operacao, y) {
-    console.log(operacao(x, y))
-}
-
-calcular(10, adicao, 20)
-calcular(10, multiplicacao, 20)
-
-document.getElementById('btn1').addEventListener('click', () => {
-    console.log('Clicou!')
+lista.forEach((value) => {
+    console.log(value)
 })
