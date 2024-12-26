@@ -1,8 +1,17 @@
-const lista = [{nome: 'Renan'}, {nome: 'Andresa'}, {nome: 'Vitor'}, {nome: 'Amanda'}]
+const promessaDeUmNumeroQualquer = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const numero = parseInt(Math.random() * 100)
+        resolve(numero)
+    }, 1000)
+})
 
-const elementosEmHtml = lista
-    .filter((e) => e.nome.startsWith('A'))
-    .map((e) => `<li>${e.nome}</li>`)
-    .join('')
+console.log('Vai filhão!')
 
-console.log(elementosEmHtml)
+promessaDeUmNumeroQualquer
+    .then((value) => {
+        console.log(value)
+        return value + 10
+    })
+    .then((value) => console.log(value))
+    .catch((error) => console.error(error))
+    .finally(() => console.log('finalizou!'))
