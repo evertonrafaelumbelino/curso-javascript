@@ -1,17 +1,7 @@
-class Pessoa {
-    constructor(nome) {
-        this.name = nome
-    }
-}
+const lista = []
 
-const lista = [new Pessoa('Renan'), new Pessoa('Andresa'), new Pessoa('Vitor'), new Pessoa('José')]
+const somaDeTodosOsNumeros = lista.reduce((previous, current) => {
+    return previous + current
+}, 0)
 
-const listaEmHtml = lista.map((element) => {
-    return `
-    <li>
-        ${element.name}
-    </li>
-    `
-})
-
-console.log(listaEmHtml)
+console.log(somaDeTodosOsNumeros)
