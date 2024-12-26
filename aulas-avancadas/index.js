@@ -1,17 +1,19 @@
-const promessaDeUmNumeroQualquer = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const numero = parseInt(Math.random() * 100)
-        resolve(numero)
-    }, 1000)
-})
+const fs = require('fs')
+const path = require('path')
 
-console.log('Vai filhão!')
+const filePath = path.resolve(__dirname, 'tarefas.csv')
 
-promessaDeUmNumeroQualquer
-    .then((value) => {
-        console.log(value)
-        return value + 10
-    })
-    .then((value) => console.log(value))
-    .catch((error) => console.error(error))
-    .finally(() => console.log('finalizou!'))
+const promessaDaLeituraDoArquivo = fs.promises.readFile(filePath)
+
+promessaDaLeituraDoArquivo
+.then((arquivo) => console.log(arquivo.toString('utf8')))
+.then((textoDoArquivo) => textoDoArquivo.split('\n').slice(1))
+.then((linhasSemOCabecalho) => linhasSemOCabecalho.map((linha) => {
+    const [nome, feito] = linha.split(';')
+    return {
+        nome,
+        feito: feito.trim() === 'true'
+    }
+}))
+.then((listaDeTarefas) => console.log(listaDeTarefas))
+.catch((error) => console.log('Deu ruim!', error))
