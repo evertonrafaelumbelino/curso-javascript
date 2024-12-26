@@ -1,8 +1,17 @@
-const lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+class Pessoa {
+    constructor(nome) {
+        this.name = nome
+    }
+}
 
-const listaDeNumerosPares = lista.filter((element) => {
-    return(element % 2 === 0)
+const lista = [new Pessoa('Renan'), new Pessoa('Andresa'), new Pessoa('Vitor'), new Pessoa('José')]
+
+const listaEmHtml = lista.map((element) => {
+    return `
+    <li>
+        ${element.name}
+    </li>
+    `
 })
 
-console.log(lista)
-console.log(listaDeNumerosPares)
+console.log(listaEmHtml)
