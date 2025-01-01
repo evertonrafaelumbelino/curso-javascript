@@ -46,19 +46,14 @@
   ],
   "professionalExperience": [
     {
-      "name": "Arquiteto de software / S3 BANK",
-      "period": "2022 - até o momento",
-      "description": "É um prazer trabalhar ao lado de tantos profissionais excepcionais e construir tantas inovações de mercado."
+      "name": "Projetos e exercícios no curso de HTML5 e CSS3 do Curso em Video",
+      "period": "2023",
+      "description": "Foi um aprendizado ótimo para minha carreira de programação"
     },
     {
-      "name": "Software Engineering Lead / DIO",
-      "period": "2021 - 2022",
-      "description": "Foi um grande prazer fazer parte deste time fantástico e poder contribuir com a transformação de tantas vidas."
-    },
-    {
-      "name": "CEO / Brain Machine",
-      "period": "2016 - 2021",
-      "description": "Anos incríveis ao lado de pessoas maravilhosas ajudando muitas empresas por todo o mundo."
+      "name": "Projetos e exercícios no curso de JavaScript na DIO",
+      "period": "2024 - até o momento",
+      "description": "Algo muito interessante de se aprender, e executar comandos na prática"
     }
   ]
 }
